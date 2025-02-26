@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  let Addvalue = () => {
+    if (count < 20) {
+      setCount(count + 1);
+    }
+  };
+
+  let DecValue = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div className=" text-blue-500 gap-4 flex-col bg-black h-screen w-full flex items-center justify-center">
+        <h1 className="text-3xl text-blue-600">Kamal || React JS</h1>
+        <button
+          className="font-semibold text text-xl bg-blue-50 m-2 p-2 rounded"
+          onClick={Addvalue}
+        >
+          Add Value {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button
+          className="font-semibold text text-xl bg-blue-50 m-2 p-2 rounded"
+          onClick={DecValue}
+        >
+          Dec Value {count}
+        </button>
+        <footer>Also Used in this {count}</footer>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
