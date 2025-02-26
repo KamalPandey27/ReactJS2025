@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-
+import Check from "./Practice";
 function App() {
   const [count, setCount] = useState(0);
   let Addvalue = () => {
@@ -32,6 +32,7 @@ function App() {
           Dec Value {count}
         </button>
         <footer>Also Used in this {count}</footer>
+        <Check />
       </div>
     </>
   );
