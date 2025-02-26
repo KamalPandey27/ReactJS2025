@@ -1,9 +1,15 @@
 import "./App.css";
 
-function App() {
+function App({ MyName = "Kamal", LastName }) {
   return (
     <>
-      <h1 className=" text-white text-2xl bg-blue-400">Tailwind Props</h1>
+      <div>
+        <h1>{MyName}</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, rem!{" "}
+        </p>
+        <h2>{LastName}</h2>
+      </div>
     </>
   );
 }
