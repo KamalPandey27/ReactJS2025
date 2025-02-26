@@ -1,8 +1,15 @@
-import { useState } from "react";
-import "./App.css";
+import Chai from "./chai";
 
 function App() {
-  return <></>;
+  const username = "chai aur code";
+
+  return (
+    <>
+      <Chai />
+      <h1>chai aur react {username}</h1>
+      <p>test para</p>
+    </>
+  );
 }
 
 export default App;
