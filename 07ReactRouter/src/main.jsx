@@ -1,7 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Layout from "./Layout.jsx";
-import { Home, About, Contact } from "./components";
+import {
+  Home,
+  About,
+  Contact,
+  Github,
+  User,
+  githubInfoLoader,
+} from "./components";
+
 import "./index.css";
 import {
   createBrowserRouter,
@@ -36,6 +44,8 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
+      <Route loader={githubInfoLoader} path="github" element={<Github />} />
+      <Route path="user/:userid" element={<User />} />
     </Route>
   )
 );
