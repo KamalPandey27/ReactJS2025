@@ -6,7 +6,8 @@ function Profile() {
   return (
     <div>
       {" "}
-      Welcome {user.Username} Your Email ID is {user.Gmail}
+      Welcome {user.Username} Your Email ID is {user.Gmail} and new user is{" "}
+      {user.newUser}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import UserContext from "../Context/UserContext";
-function login() {
+function Login() {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [Gmail, setGmail] = useState("");
@@ -35,4 +35,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
