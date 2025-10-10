@@ -2,7 +2,11 @@ import { useState } from "react";
 
 import "./App.css";
 
-function App({ name = "Kamal", rollNumber = 22827 }) {
+function App({
+  name = "Kamal",
+  rollNumber = 22827,
+  obj = { course: "bca-ctis", year: "2022 - 2025" },
+}) {
   const [count, setCount] = useState(0);
   const increase = () => {
     if (count < 20) {
@@ -21,6 +25,7 @@ function App({ name = "Kamal", rollNumber = 22827 }) {
       <button onClick={decrease}>Decrease : {count}</button>
       <div>{name}</div>
       <div>{rollNumber}</div>
+      <div>{obj}</div>
     </>
   );
 }
