@@ -26,7 +26,7 @@ const anotherElement = (
   </a>
 );
 
-const anotherUser = "chai aur react";
+// const anotherUser = "chai aur react";
 
 const reactElement = React.createElement(
   "a",
